@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CS 4515 Achievements</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<canvas id="confetti"></canvas>
+	<canvas id="achievement">
+		<!-- Credi: http://www.flaticon.com/free-icon/trophy-cup-silhouette_47847 -->
+		<img id="trophy" src="img/trophy.svg">
+	</canvas>
+	<div class="main">
+		<h1>CS 4515 Achievements</h1>
+		<div id="grade" class="grade">NR</div>
+		<div class="progress">
+			<div id="progress-bar" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Unlocked (<span id="unlocked-count">0</span>)</h2>
+				<div id="unlocked-achievements"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Locked (<span id="locked-count">0</span>)</h2>
+				<div id="locked-achievements"></div>
+			</div>
+		</div>
+	</div>
+	<audio src="sounds/achievement_unlocked.mp3" preload="auto" id="achievement-unlocked" />
+	<script src="js/confetti.js"></script>
+	<script src="js/achievements.js"></script>
+</body>
+</html>
