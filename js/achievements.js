@@ -256,7 +256,7 @@ function animateUnlockedAchievement(name) {
 			// drawCircle(~~this.x, ~~this.y, this.r, "" + this.rgba);
 			drawRoundedRectangle(
 				~~this.x, ~~this.y, this.r, Math.max(0, this.width), this.opacity,
-				"rgba(170, 170, 170, 1)", "rgba(160, 160, 160, 0.9)");
+				"rgba(0, 180, 0, 1)", "rgba(0, 160, 0, 0.9)");
 			if (this.textVisible) {
 				var ctx = canvas.getContext("2d");
 				ctx.font = "16px Nimbus Sans";
