@@ -166,16 +166,18 @@ function animateUnlockedAchievement(name) {
 		context.fill();
 		var img = document.getElementById("trophy");
 		context.drawImage(img, x - r / 2, y - r / 2, r, r);
-		console.log(style);
+		context.closePath();
 	};
 
 	drawRoundedRectangle = function(x, y, r, w, opacity, style, style2) {
 		context.beginPath();
 		context.globalAlpha = opacity;
-		context.arc(x - w, y, r, Math.PI / 2, 3 * Math.PI / 2, false);
 		context.arc(x + w, y, r, 3 * Math.PI / 2, Math.PI / 2, false)
+		context.arc(x - w, y, r, Math.PI / 2, 3 * Math.PI / 2, true)
+		context.lineTo(x + w, y - r);
 		context.fillStyle = style2;
 		context.fill();
+		context.closePath();
 		drawCircle(x - w, y, r, style);
 		return;
 	}
